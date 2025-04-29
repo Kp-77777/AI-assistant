@@ -91,7 +91,7 @@ if "chat_history" not in st.session_state:
 # Gemini response generation
 def generate_text(userinput):
     try:
-        model = genai.GenerativeModel("gemini-2.0-flash")
+        model = genai.GenerativeModel("gemini-1.5-flash")
         response = model.generate_content(userinput)
         return response.text.replace("*", "")
     except Exception as e:
